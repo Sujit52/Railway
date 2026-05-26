@@ -2,18 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSV Search Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CSV Data Search Engine | Fast & Secure</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>🔍 Search Across CSV Files</h1>
-        <input type="text" id="searchInput" placeholder="Certificate No / Name / Father's Name / Caste / Address..." autocomplete="off">
-        <div id="loading" class="loading">Loading CSV files...</div>
-        <div id="resultsCount" class="results-count"></div>
-        <div id="results" class="results"></div>
+        <!-- Header -->
+        <div class="header">
+            <h1>📊 CSV Search Engine</h1>
+            <p>Search across 5+ CSV files by Certificate No, Name, Father's Name, Caste or Address</p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-section">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="🔍 Certificate No / Applicant Name / Father Name / Caste / Address..." autocomplete="off">
+                <button id="searchBtn">Search</button>
+            </div>
+            <div class="search-stats">
+                <span id="fileStatus">📁 Loading CSV files...</span>
+                <span id="resultCount"></span>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+            <div class="spinner"></div>
+            <p>Searching across files...</p>
+        </div>
+
+        <!-- Results Area -->
+        <div id="results" class="results-container"></div>
     </div>
     <script src="script.js"></script>
 </body>
