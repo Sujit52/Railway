@@ -96,8 +96,7 @@ function performSearch() {
                                             <th>Caste</th>
                                             <th>Sub Caste</th>
                                             <th>Issue Date</th>
-                                            <th>Is Valid</th>
-                                            <th>Issued By</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -115,8 +114,7 @@ function performSearch() {
                             <td>${escapeHtml(rec.Caste || '-')}</td>
                             <td>${escapeHtml(rec.Sub_Caste || '-')}</td>
                             <td>${escapeHtml(rec.Issue_Date || '-')}</td>
-                            <td>${escapeHtml(rec.Is_Valid || '-')}</td>
-                            <td>${escapeHtml(rec.Issued_By || '-')}</td>
+                            
                         </tr>`;
                     }
                     
