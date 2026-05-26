@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Search Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Search Across CSV Files</h1>
+        <input type="text" id="searchInput" placeholder="Certificate No / Name / Father's Name / Caste / Address..." autocomplete="off">
+        <div id="loading" class="loading">Loading CSV files...</div>
+        <div id="resultsCount" class="results-count"></div>
+        <div id="results" class="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
